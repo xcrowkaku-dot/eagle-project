@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * musicEngine — production-grade audio delivery engine for Madox bot.
+ * musicEngine — production-grade audio delivery engine for Esta bot.
  *
  * Provider chain:
  *   1. YouTube via yt-dlp — tries 4 player clients in sequence:
