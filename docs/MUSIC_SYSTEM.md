@@ -1,4 +1,4 @@
-# نظام الموسيقى — Madox Bot
+# نظام الموسيقى — Esta Bot
 
 ## نظرة عامة
 
@@ -142,4 +142,4 @@ yt-dlp : /usr/local/bin/yt-dlp   ← مسار yt-dlp
 
 ---
 
-*Madox Bot v2 — MusicEngine Architecture*
+*Esta Bot v2 — MusicEngine Architecture*
