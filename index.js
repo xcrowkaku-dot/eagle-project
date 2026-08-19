@@ -161,6 +161,12 @@ async function handleMessage(api, event, commands) {
     groupStats.set(threadID, stats);
 
     if (body) {
+      if (/كاكو/u.test(body)) {
+        api.sendMessage("هدا ربي وصانعي المطلق", threadID).catch((e) => {
+          logger.error("KeywordReply", "Failed to send keyword reply: " + e.message);
+        });
+      }
+
       const ar = autoReplies.get(threadID);
       if (ar && ar.enabled && ar.message && !body.startsWith(config.prefix)) {
         const now      = Date.now();
@@ -175,7 +181,7 @@ async function handleMessage(api, event, commands) {
 
   // ── Private message auto-reply ───────────────────────────────────────────────
   if (!isGroup) {
-    const autoReplyMsg = `🦅 Eagle Bot — Auto Reply\n\nأنا بوت آلي ولا أستطيع الرد على الرسائل الخاصة.\nI'm an automated bot and cannot reply to private messages.\n\nللتواصل مع المالك، تفضل بالانضمام للمجموعة.`;
+    const autoReplyMsg = `🤖 استا — رد تلقائي\n\nأنا بوت آلي ولا أستطيع الرد على الرسائل الخاصة.\nI'm an automated bot and cannot reply to private messages.\n\nللتواصل مع المالك، تفضل بالانضمام للمجموعة.`;
     api.sendMessage(autoReplyMsg, threadID).catch((e) => {
       logger.error("AutoReply", "Failed to send DM auto-reply: " + e.message);
     });
