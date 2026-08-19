@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "commonjs",
-  "description": "Facebook Messenger group bot powered by @neoaz07/nkxfca",
+  "description": "Facebook Messenger group bot named Esta, powered by @neoaz07/nkxfca",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
